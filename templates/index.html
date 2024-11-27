@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+      body{
+        background-color: aqua;
+      }
+      .choose{
+        display: flex;
+        justify-content: center;
+      }
+
+      button {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        
+      }
+
+      .btn {
+        
+        justify-content: center;
+        align-items: center;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #007bff;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        margin-left: 350px;
+        margin-right: 70px;
+        margin-top: 200px;
+      }
+
+      .btn:hover,
+      .btn:focus {
+        background-color: #0056b3;
+        outline: none;
+      }
+
+      .btn:active {
+        background-color: #003b80;
+      }
+
+      .btn.is-loading {
+        pointer-events: none;
+      }
+    </style>
+    <title>My Project</title>
+  </head>
+  <body>
+    <h1 class = choose> Choose One &#128071;</h1>
+    <a href="{{ url_for('faceRecognition')}}">
+      <button class="btn">Face Recognition</button>
+    </a>
+    <a href="{{ url_for('objectDetection')}}">
+      <button class="btn">Object Detection</button>
+    </a>
+  </body>
+</html>
